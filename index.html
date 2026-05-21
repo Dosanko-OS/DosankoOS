@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DosankoOS 😈🔥</title>
+
+<style>
+
+/* =========================
+   Base
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#11131a;
+    color:#e4e4e4;
+    font-family:monospace;
+    overflow-x:hidden;
+}
+
+/* =========================
+   Topbar
+========================= */
+
+.topbar{
+    width:100%;
+    background:#d98dff;
+    color:#111;
+    text-align:center;
+    padding:12px;
+    font-weight:bold;
+    font-size:15px;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo{
+    font-size:6rem;
+    font-weight:bold;
+    color:#c084fc;
+    letter-spacing:6px;
+    margin-bottom:15px;
+    text-shadow:
+    0 0 10px rgba(192,132,252,0.2);
+}
+
+/* =========================
+   Subtitle
+========================= */
+
+.subtitle{
+    color:#8da9ff;
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+/* =========================
+   Funny Text
+========================= */
+
+.funny{
+    color:#cfcfcf;
+    line-height:1.8;
+    margin-bottom:45px;
+    max-width:700px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.btn{
+    background:#1b1e29;
+    border:1px solid rgba(255,255,255,0.08);
+    color:#f5f5f5;
+    text-decoration:none;
+    padding:18px 34px;
+    border-radius:10px;
+    transition:0.25s;
+    min-width:170px;
+    font-size:1rem;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    border-color:#c084fc;
+    background:#232737;
+}
+
+/* =========================
+   Features
+========================= */
+
+.features{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 100px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#181b25;
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:14px;
+    padding:25px;
+    transition:0.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#8da9ff;
+}
+
+.card h2{
+    color:#c084fc;
+    margin-bottom:14px;
+    font-size:1.2rem;
+}
+
+.card p{
+    color:#d0d0d0;
+    line-height:1.7;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:700px){
+
+    .logo{
+        font-size:3.7rem;
+        letter-spacing:2px;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+}
+
+</style>
+</head>
+
+<script>
+
+/* =========================
+   Random Topbar Text
+========================= */
+
+const messages = [
+
+    "DosankoOS 1.0 has been released 😈🔥",
+    "No outdated packages 😏💙",
+    "Arch chaos, but comfy 😈🔥",
+    "Hyprland goblin energy detected 😭🔥",
+    "Your SSD fears this installer 😏💙"
+
+];
+
+const topbar = document.querySelector(".topbar");
+
+let index = 0;
+
+setInterval(() => {
+
+    index++;
+
+    if(index >= messages.length){
+        index = 0;
+    }
+
+    topbar.textContent = messages[index];
+
+}, 4000);
+
+/* =========================
+   Button Hover Chaos
+========================= */
+
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(btn => {
+
+    btn.addEventListener("mouseenter", () => {
+
+        if(btn.innerText.includes("ISO")){
+            btn.innerText = "📦 Download Chaos";
+        }
+
+        if(btn.innerText.includes("GitHub")){
+            btn.innerText = "💻 Source Goblin";
+        }
+
+        if(btn.innerText.includes("Wiki")){
+            btn.innerText = "📖 How 2 Linux";
+        }
+
+    });
+
+    btn.addEventListener("mouseleave", () => {
+
+        if(btn.innerText.includes("Chaos")){
+            btn.innerText = "📦 ISO";
+        }
+
+        if(btn.innerText.includes("Goblin")){
+            btn.innerText = "💻 GitHub";
+        }
+
+        if(btn.innerText.includes("Linux")){
+            btn.innerText = "📖 Wiki";
+        }
+
+    });
+
+});
+</script>
+
+<body>
+
+<!-- =========================
+     Top Bar
+========================= -->
+
+<div class="topbar">
+    DosankoOS has been released 😈🔥
+</div>
+
+<!-- =========================
+     Hero
+========================= -->
+
+<section class="hero">
+
+    <div class="logo">
+        DOSANKO//OS
+    </div>
+
+    <div class="subtitle">
+        Fast. Chaotic. Surprisingly stable. 😏💙
+    </div>
+
+    <div class="funny">
+
+        yes, we have updated packages 😏💙
+        <br>
+        And NO, this is definitely not an indirect for Manjaro 😭🔥
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="#" class="btn">
+            📦 ISO
+        </a>
+
+        <a href="#" class="btn">
+            💻 GitHub
+        </a>
+
+        <a href="wiki.html" class="btn">
+            📖 Wiki
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     Features
+========================= -->
+
+<section class="features">
+
+    <div class="card">
+
+        <h2>⚡ Easy Install</h2>
+
+        <p>
+            Friendly installer with easy setup,
+            BIOS/UEFI support and Hyprland ready out of the box 😈🔥
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🔒 Privacy</h2>
+
+        <p>
+            Includes privacy-focused tools like
+            torsocks, Tor Browser and openVPN 😈🔥
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🎌 Anime Ready</h2>
+
+        <p>
+            ani-cli, mangal, goanime
+            and maximum comfy Linux culture 😭🔥
+        </p>
+
+    </div>
+
+      <div class="card">
+
+        <h2>minimum requiriments</h2>
+
+        <p>
+        CPU:
+        AMD FX / Intel 2nd Gen Core i
+
+         | RAM:
+        4GB recommended
+        3.5GB minimum 😏💙
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     Footer
+========================= -->
+
+<div class="footer">
+
+    Lightweight. Stylish. Chaotic. 😏💙
+
+</div>
+
+</body>
+</html>
